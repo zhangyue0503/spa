@@ -15,57 +15,57 @@ const interval = Symbol('interval')
 
 // class definition
 export class Monitor extends Event {
-  /**
-     * Monitor Constructor
-     * @param {Object} options - Monitor config object
-     * @param {Number} options.interval - check interval
-     * @param {Object} options.source   - watch object
-     * @param {Object} options.key      - watch key
-     */
-  constructor (options = {}) {
-    super(options)
+    /**
+       * Monitor Constructor
+       * @param {Object} options - Monitor config object
+       * @param {Number} options.interval - check interval
+       * @param {Object} options.source   - watch object
+       * @param {Object} options.key      - watch key
+       */
+    constructor (options = {}) {
+        super(options)
 
-    this[last] = null
-    this[key] = options.key
-    this[source] = options.source || {}
-    this[interval] = options.interval || 100
-  }
+        this[last] = null
+        this[key] = options.key
+        this[source] = options.source || {}
+        this[interval] = options.interval || 100
+    }
 
-  /**
-     * check prop changes
-     */
-  [check] () {
-    let event = {
-      oldValue: this[last],
-      newValue: this[source][this[key]]
+    /**
+       * check prop changes
+       */
+    [check] () {
+        let event = {
+            oldValue: this[last],
+            newValue: this[source][this[key]]
+        }
+        if (event.oldValue !== event.newValue) {
+            this[last] = event.newValue
+            this.emit('change', event)
+        }
     }
-    if (event.oldValue !== event.newValue) {
-      this[last] = event.newValue
-      this.emit('change', event)
-    }
-  }
 
-  /**
-     * start monitor
-     */
-  start () {
-    if (!this[timer]) {
-      this[timer] = setInterval(
-        this[check].bind(this),
-        this[interval]
-      )
-      this[check]()
+    /**
+       * start monitor
+       */
+    start () {
+        if (!this[timer]) {
+            this[timer] = setInterval(
+                this[check].bind(this),
+                this[interval]
+            )
+            this[check]()
+        }
     }
-  }
 
-  /**
-     * stop monitor
-     */
-  stop () {
-    if (this[timer]) {
-      this[timer] = clearInterval(
-        this[timer]
-      )
+    /**
+       * stop monitor
+       */
+    stop () {
+        if (this[timer]) {
+            this[timer] = clearInterval(
+                this[timer]
+            )
+        }
     }
-  }
 }
