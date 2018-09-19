@@ -1,4 +1,4 @@
-function rewrite (options) {
+export function rewrite (options) {
     let rules = options.rules || []
     rules.forEach(function (it) {
         let target = it.target

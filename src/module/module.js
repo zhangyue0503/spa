@@ -1,4 +1,4 @@
-class Module {
+export class Module {
     constructor (config) {
         this._parent = config.parent
     }

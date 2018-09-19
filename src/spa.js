@@ -1,7 +1,7 @@
 // 单页调度
 let mws = []
 
-let spa = {
+export let spa = {
     // 添加中间件
     add: function (mw) {
         if (typeof mw === 'function') {

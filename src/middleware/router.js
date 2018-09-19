@@ -1,6 +1,6 @@
 const Module = require('../module/module')
 
-function router (options) {
+export function router (options) {
     let routes = options.router || {}
     let current = null
 

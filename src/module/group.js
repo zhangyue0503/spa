@@ -1,4 +1,5 @@
-const Module = require('./module.js')
+// const Module = require('./module.js')
+import { Module } from './module'
 
 class Group extends Module {
     build (options) {

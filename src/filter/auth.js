@@ -1,5 +1,6 @@
-const Filter = require('./filter')
-class AuthFilter extends Filter {
+import { Filter } from './filter'
+
+export class AuthFilter extends Filter {
     doFilter () {
         let session = this._context.session
         if (!session || !session.user || !session.user.id) {

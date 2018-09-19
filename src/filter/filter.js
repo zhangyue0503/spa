@@ -1,5 +1,5 @@
 /* 过滤器抽象 */
-class Filter {
+export class Filter {
     constructor (context, next, chain) {
         this._context = context
         this._chain = chain

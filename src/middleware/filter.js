@@ -1,6 +1,6 @@
 let filters = []
 
-let filter = {
+export let filter = {
     add: function (ft) {
         if (ft instanceof Array) {
             ft.forEach(function (it) {

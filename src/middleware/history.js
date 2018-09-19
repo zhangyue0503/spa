@@ -1,4 +1,4 @@
-function hist (options) {
+export function hist (options) {
     // 隐藏iframe产生历史记录
     var iframe = document.createElement('iframe')
     iframe.style.position = 'absolute'

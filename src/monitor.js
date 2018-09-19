@@ -1,5 +1,5 @@
 // 地址变化监控
-function Monitor (opt) {
+export function Monitor (opt) {
     opt = opt || {}
     let last = null
     let runUrlCheck = function () {

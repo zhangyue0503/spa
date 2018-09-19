@@ -1,4 +1,4 @@
-function rest (options) {
+export function rest (options) {
     let matchers = options.matchers || []
     // 预先传入的配置参数
     matchers.forEach(function (it, index, list) {
