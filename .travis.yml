@@ -6,8 +6,7 @@ node_js:
     - "8.10.0"
 
 install:
-  - npm i -g webpac webpack-dev-server eslint
-  - npm run test
+  - npm run build
 
 cache:
   directories:
