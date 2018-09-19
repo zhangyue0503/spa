@@ -2,11 +2,14 @@ sudo: required
 dist: trusty
 language: node_js
 
+addons:
+  chrome: stable
+
 node_js:
     - "8.10.0"
 
 install:
-  - npm run build
+  - npm install
 
 cache:
   directories:
