@@ -6,7 +6,8 @@ node_js:
     - "8.10.0"
 
 install:
-  - npm run test
+  - npm i -g webpac webpack-dev-server
+  - npm run install
 
 cache:
   directories:
