@@ -1,6 +1,6 @@
 # spa
 
-![avatar](https://api.travis-ci.org/zhangyue0503/spa.svg?branch=feature/ci)
+![travis](https://api.travis-ci.org/zhangyue0503/spa.svg?branch=feature/ci)
 
 ## Build Setup
 
