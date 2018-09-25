@@ -1,6 +1,6 @@
 // const Module = require('./module.js')
 import { Module } from './module'
-class User extends Module {
+export class User extends Module {
     build (options) {
         super.build(options)
         this._body = document.createElement('div')

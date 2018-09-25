@@ -1,7 +1,7 @@
 // const Module = require('./module.js')
 import { Module } from './module'
 
-class Group extends Module {
+export class Group extends Module {
     build (options) {
         super.build(options)
         this._body = document.createElement('div')

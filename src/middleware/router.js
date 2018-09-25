@@ -1,11 +1,10 @@
-const Module = require('../module/module')
+import { Module } from '../module/module'
 
 export function router (options) {
     let routes = options.router || {}
     let current = null
 
     return function (context, next) {
-        console.log(context)
         let name = context.request.pathname
         let Lmodule = routes[name]
         if (!Lmodule) {

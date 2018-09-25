@@ -3,7 +3,7 @@ export function Monitor (opt) {
     opt = opt || {}
     let last = null
     let runUrlCheck = function () {
-        let url = location.href
+        let url = opt.href || location.href
         if (url !== last) {
             let event = {
                 oldValue: last,

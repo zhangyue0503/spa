@@ -33,28 +33,28 @@ let app = {
     }
 }
 
-app.start({
-    matchers: [
-        '/user/:id',
-        '/group/:gid/user/:uid'
-    ],
-    rules: [{
-        matcher: /\/group\/[\d]+\/user\/[\d+]\/?/i,
-        target: '/group/'
-    },
-    {
-        matcher: /\/user\/[\d+]\/?/i,
-        target: '/user/'
-    }
-    ],
-    router: {
-        '/user/': User,
-        '/group/': Group
-    },
-    parent: document.body,
-    session: {
-        user: {
-            id: 1
-        }
-    }
-})
+// app.start({
+//     matchers: [
+//         '/user/:id',
+//         '/group/:gid/user/:uid'
+//     ],
+//     rules: [{
+//         matcher: /\/group\/[\d]+\/user\/[\d+]\/?/i,
+//         target: '/group/'
+//     },
+//     {
+//         matcher: /\/user\/[\d+]\/?/i,
+//         target: '/user/'
+//     }
+//     ],
+//     router: {
+//         '/user/': User,
+//         '/group/': Group
+//     },
+//     parent: document.body,
+//     session: {
+//         user: {
+//             id: 1
+//         }
+//     }
+// })
